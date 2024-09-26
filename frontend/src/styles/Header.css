@@ -1,0 +1,186 @@
+/* General Header Styles */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.header.transparent {
+    background-color: transparent;
+}
+
+.header.transparent .nav-links a,
+.header.transparent .hamburger {
+    color: white;
+    /* White color for links and hamburger button on transparent background */
+}
+
+.header.white {
+    background-color: white;
+}
+
+.header.white .nav-links a,
+.header.white .hamburger {
+    color: black;
+    /* Black color for links and hamburger button on white background */
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 40px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    /* Fixed position of the logo */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 80px;
+    /* Fixed position of the nav links */
+    transition: max-height 0.3s ease;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 30px;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    /* Fixed position of the hamburger button */
+}
+
+.nav-links.open {
+    max-height: 500px;
+    /* Adjust as needed */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mobile-logo {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    margin-right: 3%;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: -10px;
+    /* Move close button slightly to the left */
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mobile-menu-section {
+    flex: 1;
+    min-width: 200px;
+    /* Adjust as needed */
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu-links h3 {
+    margin-bottom: 10px;
+}
+
+.mobile-menu-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: block;
+}
+
+.mobile-menu-links a:hover {
+    color: #007bff;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 0;
+        /* Center the logo for mobile view */
+    }
+
+    .hamburger {
+        font-size: 30px;
+        background: none;
+        border: none;
+        display: block;
+        margin-right: 0;
+        /* Remove margin-right for mobile view */
+    }
+
+    .mobile-menu-content {
+        flex-direction: column;
+        /* Stack sections vertically on small screens */
+    }
+}

@@ -1,0 +1,399 @@
+/* Base styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 60px; /* Adjusted for header height */
+}
+
+section {
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    animation: unfold 1s ease-out forwards;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: unfold 1s ease-out forwards;
+}
+
+
+
+
+
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 540px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-text h1 {
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(17, 16, 16, 0.5);
+    color: #461bf3;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping */
+    overflow: visible;
+    /* Change to 'visible' to show overflowing text */
+    white-space: normal;
+    /* Allows text to wrap instead of being on one line */
+    border-right: 3px solid #333;
+    font-size: 4.5vw;
+    /* Adjusted for responsiveness */
+    animation: unfold 1s ease-out forwards;
+}
+
+.semicircle-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.semicircle {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(to top, #5f0972, #137dba, #2ae3ec);
+    border-radius: 100% 100% 80% 80%;
+    overflow: hidden;
+    animation: expand 3s ease-in-out;
+}
+
+.semicircle-image {
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 95%;
+    border-radius: 120% 120% 90% 90%;
+    object-fit: cover;
+    animation: zoomIn 4s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes expand {
+    from {
+        height: 450px;
+    }
+    to {
+        height: 500px;
+    }
+}
+
+.mission-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.mission-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-text h2 {
+    margin-top: -90px;
+    font-size: 3vw; /* Adjusted for responsiveness */
+}
+
+.mission-text p {
+    margin: 0;
+    font-size: 1.2vw; /* Adjusted for responsiveness */
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in;
+}
+
+.values-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.value {
+    width: 200px;
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+    animation: fadeIn 2s ease-in;
+}
+
+.value img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.value h3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.5vw; /* Adjusted for responsiveness */
+    z-index: 1;
+    color: #fcfcfc;
+}
+
+/* Team section */
+.team-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(255, 252, 252);
+    animation: fadeIn 2s ease-in;
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+}
+
+.cta-section {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.cta-section h2 {
+    z-index: 3;
+    position: relative;
+    animation: fadeIn 2s ease-in;
+}
+
+.circle-container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+.circle-background {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #5f0972, #4181d5, #2ae3ec);
+    border-radius: 50%;
+    z-index: 0;
+    animation: expandCircle 3s ease-in-out;
+}
+
+.cta-image {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #5f0972, #2ae3ec);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3vw;
+    }
+
+    h2 {
+        font-size: 2.8vw;
+    }
+
+    p {
+        font-size: 1.5vw;
+    }
+
+        .mission-text {
+            padding: 20px;
+            /* Adjust as necessary */
+            overflow: hidden;
+            /* Prevents overflow issues */
+        }
+    
+        .mission-text h2 {
+            font-size: 2.5vw;
+            margin: 8px 0;
+            /* Add margin for spacing */
+            
+        }
+    
+        .mission-text p {
+            font-size: 1.5vw;
+            margin: 6px 0;
+            /* Add margin for spacing */
+           
+        }
+
+    .value h3 {
+        font-size: 5vw;
+        overflow: visible;
+    }
+
+    .mission-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-text,
+    .mission-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .team-member img {
+        height: 180px;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+          .mission-text {
+              padding: 20px;
+              /* Adjust as necessary */
+              overflow: hidden;
+              /* Prevents overflow issues */
+          }
+    
+          .mission-text h2 {
+              font-size: 2.5vw;
+              margin: 8px 0;
+              /* Add margin for spacing */
+    
+          }
+    
+          .mission-text p {
+              font-size: 1.5vw;
+              margin: 6px 0;
+              /* Add margin for spacing */
+    
+          }
+
+    .values-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .value {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .team-member {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .team-member img {
+        height: 150px;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}

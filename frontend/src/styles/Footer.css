@@ -1,0 +1,234 @@
+/* General Reset */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container for layout */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content area */
+.content {
+    flex: 1;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f5f4f4;
+    color: #1d1e1f;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo-img {
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links h3 {
+    margin-bottom: 15px;
+    color: #383737;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.footer-links a {
+    display: block;
+    color: #5b4f4f;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s;
+    font-size: 0.875rem;
+    padding-left: 15px;
+    /* Align links with header */
+}
+
+.footer-links a:hover {
+    color: #23dcf9;
+}
+
+/* Follow Us Section */
+.footer-follow {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-follow h3 {
+    color: #383737;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/* Hide 'Follow Us' header on tablet and mobile views */
+@media (max-width: 768px) {
+    .footer-social h3 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-social h3 {
+        display: none;
+    }
+}
+
+.footer-social a {
+    color: #797676;
+    font-size: 1.75rem;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #3aa6f3;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #343131;
+}
+
+.footer-rights {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: #1f1e1e;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+    }
+
+    .footer-logo-img {
+        max-width: 100px;
+    }
+
+    .footer-links h3,
+    .footer-follow h3 {
+        font-size: 0.95rem;
+    }
+
+    .footer-links a,
+    .footer-bottom,
+    .footer-rights {
+        font-size: 0.8rem;
+    }
+
+    .footer-social a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        text-align: left;
+    }
+
+    .footer-links {
+        text-align: left;
+    }
+
+    .footer-follow {
+        text-align: left;
+        margin-top: auto;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+
+    .footer-links h3,
+    .footer-follow h3 {
+        font-size: 0.9rem;
+    }
+
+    .footer-links a {
+        font-size: 0.75rem;
+        padding-left: 10px;
+        /* Ensure alignment on smaller screens */
+    }
+
+    .footer-social a {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .footer-logo-img {
+        max-width: 80px;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-links h3,
+    .footer-follow h3 {
+        font-size: 0.85rem;
+    }
+
+    .footer-links a,
+    .footer-bottom,
+    .footer-rights {
+        font-size: 0.7rem;
+        padding-left: 8px;
+        /* Further alignment for very small screens */
+    }
+
+    .footer-social a {
+        font-size: 1rem;
+    }
+}
