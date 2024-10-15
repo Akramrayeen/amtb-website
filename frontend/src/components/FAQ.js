@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos'; // Import AOS for animations
+import 'aos/dist/aos.css'; // Import AOS styles
 import '../styles/FAQ.css'; // Assuming your CSS is in FAQ.css
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
-    const toggleAnswer = index => {
+    const toggleAnswer = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    // Use effect to handle fade-in animation on component mount
     useEffect(() => {
-        const elements = document.querySelectorAll('.faq-item');
-        elements.forEach((el, index) => {
-            setTimeout(() => {
-                el.classList.add('fade-in');
-            }, index * 100); // Stagger the animation
-        });
+        AOS.init({ duration: 500, once: true }); // Initialize AOS with a duration of 1000ms
     }, []);
 
     const faqs = [
@@ -55,10 +51,15 @@ const FAQ = () => {
 
     return (
         <div className="faq-container">
-            <h2 className="faq-title">FAQ</h2>
-            <p className="faq-text">Frequently asked questions</p>
+            <h2 className="faq-title" data-aos="fade-up">FAQ</h2>
+            <p className="faq-text" data-aos="fade-up">Frequently asked questions</p>
             {faqs.map((faq, index) => (
-                <div className="faq-item" key={index}>
+                <div
+                    className="faq-item"
+                    key={index}
+                    data-aos="fade-up" // AOS attribute for the fade-up animation
+                    data-aos-delay={index * 100} // Delay effect for staggered animations
+                >
                     <div className="faq-question">{faq.question}</div>
                     <div className="faq-answer-container">
                         <p className={`faq-answer ${openIndex === index ? 'faq-answer-expanded' : ''}`}>

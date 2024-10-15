@@ -1,0 +1,416 @@
+/* General Page Styles */
+.education-page {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        padding: 0;
+        /* Removed unnecessary padding */
+        margin: 0;
+        /* Removed unnecessary margin */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+        width: 100%;
+        /* Ensure full width */
+    }
+
+
+
+    body {
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+        width: 100%;
+        /* Ensure body is 100% of viewport width */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+    }
+
+.education-hero-content h1 {
+    font-size: 3.7vw;
+    /* Default size for larger screens */
+    color: #663f0c;
+    margin-top: -1%;
+    animation: unfold 1s ease-out forwards;
+}
+
+.education-hero-content p {
+    font-size: 0.9rem;
+    /* Default size for larger screens */
+    color: #333;
+    margin-bottom: 3%;
+}
+
+
+
+/* Circle Container */
+.education-circle-container {
+    height: 37.5vw;
+    /* Height set in viewport width */
+    width: 72.5vw;
+    /* Width set in viewport width */
+    max-height: 42.5vh;
+    /* Limit height for larger screens */
+    max-width: 68.5vh;
+    /* Limit width for larger screens */
+    position: relative;
+    margin: 0 auto;
+    /* Centering the circle container */
+}
+
+/* Wing Circles */
+.education-wing-circle {
+    width: 100%;
+    /* Full width for responsiveness */
+    height: 100%;
+    /* Full height for responsiveness */
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Left Circle */
+.education-left-circle {
+    background: linear-gradient(45deg, #392209, #f5b235);
+    /* Example gradient */
+    left: 20%;
+    /* Align to left */
+    animation: unfold 1s ease-out forwards;
+}
+
+/* Right Circle */
+.education-right-circle {
+    background: linear-gradient(45deg, #f2a73d, #5f4a0e);
+    /* Different gradient */
+    right: 20%;
+    /* Align to right */
+    animation: unfold 1s ease-out forwards;
+}
+
+/* Center Image Circle */
+.education-center-image-circle {
+    height: 35vw;
+    width: 65vw;
+    max-width: 600px;
+    max-height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5% solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+
+
+}
+
+/* Center Image */
+.education-center-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Small Circle Wrapper */
+.education-small-circle-wrapper {
+    margin-top: 2%;
+    text-align: center;
+}
+
+/* Small Circle */
+.education-small-circle {
+    width: 5vw;
+    height: 5vw;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #f2a73d, #5f4a0e);
+    margin: 3% auto;
+    /* Center the small circle */
+}
+
+/* Small Circle Text */
+.education-small-circle-text {
+    font-size: 2.0vw;
+    /* Approximately 1rem based on a viewport width of 800px */
+    font-weight: bold;
+    color: #6011e9;
+    margin: 3% auto;
+}
+
+
+
+/* Adjusting for small circle hover effect */
+.education-small-circle-wrapper:hover .education-small-circle {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    /* On hover */
+    transition: 0.3s ease;
+}
+
+.education-arrow {
+    font-weight: bold;
+    font-size: 3vw;
+    color: #f6f3f4;
+
+}
+
+.education-small-circle-wrapper:hover .education-arrow {
+    color: #fff;
+}
+
+
+/* Services Section */
+.education-section {
+    background-image: url('../assets/images/INDUSTRY/Education/image2.jpg'), linear-gradient(to right, #f2a73d, #5f4a0e);
+    background-size: 50% auto, 60% auto;
+    /* Make background-size responsive */
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 5vw 3vw;
+    /* Use responsive padding */
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+
+.education-section h2 {
+    font-size: 3.5vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(50, 52, 54, 0.916);
+}
+
+.education-section p {
+    font-size: 1.8vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Responsive width */
+}
+
+
+.education-service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+}   
+
+.education-service-tags span {
+    background-color: #8a7007;
+    color: rgb(246, 245, 245);
+    padding: 0.5vw 1.2vw;
+    /* Responsive padding */
+    border-radius: 6px;
+    font-size: 1.2vw;
+    /* Responsive font size */
+    margin-top: 1vw;
+    /* Responsive margin */
+}
+
+
+
+.education-tool-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #7e6112;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease;
+    padding: 1vw;
+}
+
+.education-tool-icon:hover {
+    transform: scale(1.1);
+    /* Hover effect */
+}
+
+.education-tool-icon p {
+    margin-top: 1vw;
+    /* Responsive margin */
+    font-size: 1.4vw;
+    /* Responsive font size */
+    font-weight: bold;
+    color: #0e0f0f;
+}
+
+.education-industry-section {
+    background-image: linear-gradient(to right, #f2a73d, #5f4a0e), url('../assets/images/INDUSTRY/Education/image3.jpg');
+    background-size: 50% 50%, 50% 50%;
+    /* Responsive background size */
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 5vw 3vw;
+    /* Responsive padding */
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+
+.education-industry-section h2 {
+    font-size: 3vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(93, 96, 99, 0.916);
+}
+
+.education-industry-section p {
+    font-size: 1.5vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Set max-width relative to the viewport */
+}
+
+.education-circle-button {
+    display: flex;
+    /* Flexbox to center the arrow */
+    justify-content: center;
+    /* Center the arrow */
+    align-items: center;
+    /* Center the arrow */
+    background: linear-gradient(135deg, #f2a73d, #5f4a0e);
+    /* Gradient color */
+    color: white;
+    width: 10vw;
+    /* Responsive width */
+    height: 10vw;
+    /* Responsive height */
+    max-width: 40px;
+    /* Max width to limit the circle size */
+    max-height: 40px;
+    /* Max height to limit the circle size */
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.education-circle-button:hover {
+    transform: scale(1.1);
+    /* Scale effect on hover */
+}
+
+
+
+/* Services Section */
+.education-mad-services-section {
+    background-image: url('../assets/images/INDUSTRY/Education/image4.avif'), linear-gradient(to right, #f2a73d, #5f4a0e);
+    background-size: 50% 40%, 60% 40%;
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+.education-mad-services-section h2 {
+    font-size: 4vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(50, 52, 54, 0.916);
+}
+
+.education-mad-services-section p {
+    font-size: 1.5vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Responsive max width */
+}
+
+
+@media (max-width: 768px) {
+    .education-hero-content h1 {
+        font-size: 5vw;
+    }
+
+    .education-hero-content p {
+        font-size: 0.5rem;
+    }
+
+    .education-circle-container {
+        width: 70vw;
+        height: 35vw;
+    }
+
+    .education-center-image-circle {
+        height: 30vw;
+        width: 60vw;
+    }
+
+    .education-tool-icon p {
+        font-size: 2.5vw;
+        /* Adjust font size inside tool icons for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .education-hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .education-hero-content p {
+        font-size: 1.5dvh;
+        /* Set a small font size *
+        line-height: 1;
+        /* Reduce line height minimize space */
+        margin: 0;
+        /* Remove any default margins */
+        padding: 0;
+        /* Remove any default padding */
+        overflow: hidden;
+        /* Prevent overflow */
+        display: block;
+        /* Ensures it behaves like a block element */
+    }
+
+
+    .education-circle-container {
+        width: 50vw;
+        height: 25vw;
+    }
+
+    .education-center-image-circle {
+        height: 25vw;
+        width: 50vw;
+    }
+
+    .education-small-circle {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .education-arrow {
+        font-size: 5vw;
+    }
+
+
+
+    .education-tool-icon {
+        padding: 2vw;
+        /* Adjust padding for mobile */
+    }
+
+    .education-tool-icon p {
+        font-size: 3vw;
+        /* Adjust font size inside tool icons for mobile */
+    }
+
+}

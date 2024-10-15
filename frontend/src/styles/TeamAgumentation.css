@@ -1,0 +1,411 @@
+/* General Page Styles */
+.teamagumentation-page {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        padding: 0;
+        /* Removed unnecessary padding */
+        margin: 0;
+        /* Removed unnecessary margin */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+        width: 100%;
+        /* Ensure full width */
+    }
+
+
+
+    body {
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+        width: 100%;
+        /* Ensure body is 100% of viewport width */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+    }
+
+
+.ta-hero-content h1 {
+    font-size: 3.7vw;
+    /* Default size for larger screens */
+    color: #525128;
+    margin-top: -1%;
+    animation: unfold 1s ease-out forwards;
+}
+
+.ta-hero-content p {
+    font-size: 0.9rem;
+    /* Default size for larger screens */
+    color: #181717;
+    margin-bottom: 3%;
+}
+
+
+/* Circle Container */
+.ta-circle-container {
+    width: 80vw;
+    height: 35vw;
+    max-width: 500px;
+    max-height: 250px;
+    position: relative;
+    margin: 0 auto;
+    /* Centering */
+}
+
+/* Wing Circles */
+.ta-wing-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Left Circle */
+.ta-left-circle {
+    background: linear-gradient(45deg, #2a0d88, #fff703);
+    /* Example gradient */
+    left: 20%;
+    /* Align to left */
+    animation: unfold 1s ease-out forwards;
+}
+
+/* Right Circle */
+.ta-right-circle {
+    background: linear-gradient(45deg, #e1f80f, #2a0d88);
+    /* Different gradient */
+    right: 20%;
+    /* Align to right */
+    animation: unfold 1s ease-out forwards;
+}
+
+/* Center Image Circle */
+.ta-center-image-circle {
+    height: 35vw;
+    width: 65vw;
+    max-width: 600px;
+    max-height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5% solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+
+
+}
+
+/* Center Image */
+.ta-center-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Small Circle Wrapper */
+.ta-small-circle-wrapper {
+    margin-top: 2%;
+    text-align: center;
+}
+
+/* Small Circle */
+.ta-small-circle {
+    width: 5vw;
+    height: 5vw;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#e1f80f,
+        #2a0d88);
+    margin: 3% auto;
+    /* Center the small circle */
+}
+
+/* Small Circle Text */
+.ta-small-circle-text {
+    font-size: 2.0vw;
+    /* Approximately 1rem based on a viewport width of 800px */
+    font-weight: bold;
+    color: #6011e9;
+    margin: 3% auto;
+}
+
+
+
+/* Adjusting for small circle hover effect */
+.ta-small-circle-wrapper:hover .ta-small-circle {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    /* On hover */
+    transition: 0.3s ease;
+}
+
+.ta-arrow {
+    font-weight: bold;
+    font-size: 3vw;
+    color: #f6f3f4;
+
+}
+
+.ta-small-circle-wrapper:hover .ta-arrow {
+    color: #fff;
+}
+
+
+/* Services Section */
+.teamagumentation-section {
+    background-image: url('../assets/images/Services/teamagumentation/image3.jpeg'), linear-gradient(to right, #e1f80f, #2a0d88);
+    background-size: 50% auto, 60% auto;
+    /* Make background-size responsive */
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 5vw 3vw;
+    /* Use responsive padding */
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+
+.teamagumentation-section h2 {
+    font-size: 3.5vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(50, 52, 54, 0.916);
+}
+
+.teamagumentation-section p {
+    font-size: 1.8vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Responsive width */
+}
+
+
+.ta-service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+.ta-service-tags span {
+    background-color: #c1dc11;
+    color: rgb(20, 18, 18);
+   padding: 0.5vw 1.2vw;
+    /* Responsive padding */
+    border-radius: 6px;
+    font-size: 1.2vw;
+    /* Responsive font size */
+    margin-top: 1vw;
+    /* Responsive margin */
+}
+
+
+
+.ta-tool-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #837804;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease;
+    padding: 1vw;
+}
+
+.ta-tool-icon:hover {
+    transform: scale(1.1);
+    /* Hover effect */
+}
+
+.ta-tool-icon p {
+    margin-top: 1vw;
+    /* Responsive margin */
+    font-size: 1.4vw;
+    /* Responsive font size */
+    font-weight: bold;
+    color: #0e0f0f;
+}
+
+.ta-industry-section {
+    background-image: linear-gradient(to right, #e1f80f, #2a0d88), url('../assets/images/Services/teamagumentation/image1.jpg');
+    background-size: 50% 50%, 50% 50%;
+    /* Responsive background size */
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 5vw 3vw;
+    /* Responsive padding */
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+
+.ta-industry-section h2 {
+    font-size: 3vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(93, 96, 99, 0.916);
+}
+
+.ta-industry-section p {
+    font-size: 1.5vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Set max-width relative to the viewport */
+}
+
+.ta-circle-button {
+    display: flex;
+    /* Flexbox to center the arrow */
+    justify-content: center;
+    /* Center the arrow */
+    align-items: center;
+    /* Center the arrow */
+    background: linear-gradient(135deg,  #e1f80f, #2a0d88);
+    /* Gradient color */
+    color: white;
+    width: 10vw;
+    /* Responsive width */
+    height: 10vw;
+    /* Responsive height */
+    max-width: 40px;
+    /* Max width to limit the circle size */
+    max-height: 40px;
+    /* Max height to limit the circle size */
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.ta-circle-button:hover {
+    transform: scale(1.1);
+    /* Scale effect on hover */
+}
+
+
+
+/* Services Section */
+.ta-mad-services-section {
+    background-image: url('../assets/images/Services/teamagumentation/image4.webp'), linear-gradient(to right, #e1f80f, #2a0d88);
+    background-size: 50% 40%, 60% 40%;
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+.ta-mad-services-section h2 {
+    font-size: 4vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(50, 52, 54, 0.916);
+}
+
+.ta-mad-services-section p {
+    font-size: 1.5vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Responsive max width */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .ta-hero-content h1 {
+            font-size: 5vw;
+        }
+    
+        .ta-hero-content p {
+            font-size: 0.5rem;
+        }
+    
+        .ta-circle-container {
+            width: 70vw;
+            height: 35vw;
+        }
+    
+        .ta-center-image-circle {
+            height: 30vw;
+            width: 60vw;
+        }
+    
+        .ta-tool-icon p {
+            font-size: 2.5vw;
+            /* Adjust font size inside tool icons for tablets */
+        }
+}
+
+@media (max-width: 480px) {
+    .ta-hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .ta-hero-content p {
+        font-size: 1.5dvh;
+        /* Set a small font size *
+        line-height: 1;
+        /* Reduce line height minimize space */
+        margin: 0;
+        /* Remove any default margins */
+        padding: 0;
+        /* Remove any default padding */
+        overflow: hidden;
+        /* Prevent overflow */
+        display: block;
+        /* Ensures it behaves like a block element */
+    }
+
+
+    .ta-circle-container {
+        width: 50vw;
+        height: 25vw;
+    }
+
+    .ta-center-image-circle {
+        height: 25vw;
+        width: 50vw;
+    }
+
+    .ta-small-circle {
+        width: 6vw;
+        height: 6vw;
+    }
+    
+      .ta-arrow {
+        font-size: 5vw;
+    }
+
+
+
+    .ta-tool-icon {
+        padding: 2vw;
+        /* Adjust padding for mobile */
+    }
+
+    .ta-tool-icon p {
+        font-size: 3vw;
+        /* Adjust font size inside tool icons for mobile */
+    }
+
+}

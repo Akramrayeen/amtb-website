@@ -92,7 +92,7 @@ const ContactForm = ({ className, style }) => {
 
     return (
         <div className={`contact-container ${className}`} style={style}>
-            <h2>Contact Us</h2>
+              <h2>Let's Bring Your Idea to Life</h2>
             {notification && <p className="success-message">{notification}</p>} {/* Display success message */}
             {error && <p className="error-message">{error}</p>} {/* Display error message */}
             <form className="contact-form" onSubmit={handleSubmit} encType="multipart/form-data">

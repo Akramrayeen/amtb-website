@@ -66,7 +66,6 @@ p {
     /* Change to 'visible' to show overflowing text */
     white-space: normal;
     /* Allows text to wrap instead of being on one line */
-    border-right: 3px solid #333;
     font-size: 4.5vw;
     /* Adjusted for responsiveness */
     animation: unfold 1s ease-out forwards;
@@ -89,7 +88,7 @@ p {
     background: linear-gradient(to top, #5f0972, #137dba, #2ae3ec);
     border-radius: 100% 100% 80% 80%;
     overflow: hidden;
-    animation: expand 3s ease-in-out;
+    
 }
 
 .semicircle-image {
@@ -101,7 +100,7 @@ p {
     height: 95%;
     border-radius: 120% 120% 90% 90%;
     object-fit: cover;
-    animation: zoomIn 4s ease-in-out;
+    
 }
 
 @keyframes zoomIn {
@@ -128,6 +127,7 @@ p {
     align-items: center;
     gap: 20px;
     animation: fadeIn 2s ease-in;
+    margin-left: 3%;
 }
 
 .mission-text {
@@ -160,11 +160,15 @@ p {
     animation: fadeIn 2s ease-in;
 }
 
+.section{
+    margin-left: 3%;
+}
 .values-section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 
 .value {
@@ -226,6 +230,7 @@ p {
     text-align: center;
     padding: 20px;
     position: relative;
+    margin-left: 3%;
 }
 
 .cta-section h2 {
@@ -341,16 +346,49 @@ p {
 /* Responsive styles for mobile screens */
 @media (max-width: 480px) {
     h1 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     h2 {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     p {
-        font-size: 1em;
+        font-size: 0.7em;
     }
+
+    .hero-section {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+
+.semicircle {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to top, #5f0972, #137dba, #2ae3ec);
+    border-radius: 100% 100% 80% 80%;
+    overflow: hidden;
+    
+}
+
+.semicircle-image {
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 95%;
+    border-radius: 120% 120% 90% 90%;
+    object-fit: cover;
+    
+}
+
 
           .mission-text {
               padding: 20px;
@@ -360,14 +398,14 @@ p {
           }
     
           .mission-text h2 {
-              font-size: 2.5vw;
+              font-size: 4.5vw;
               margin: 8px 0;
               /* Add margin for spacing */
     
           }
     
           .mission-text p {
-              font-size: 1.5vw;
+              font-size: 2.5vw;
               margin: 6px 0;
               /* Add margin for spacing */
     
@@ -376,6 +414,7 @@ p {
     .values-section {
         flex-direction: column;
         gap: 15px;
+        margin-left: 6%;
     }
 
     .value {
@@ -390,6 +429,7 @@ p {
 
     .team-member img {
         height: 150px;
+        width:150px
     }
 
     .cta-button {

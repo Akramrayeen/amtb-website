@@ -1,258 +1,614 @@
-.contact-page body,
-.contact-page html {
+/* Contact Page Styles */
+.contact-page {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
+
+    
 }
 
-.contact-page * {
-    box-sizing: inherit;
-}
-
+/* Top Section - Full-Screen Image Cover */
 .contact-page .top-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 50px 20px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+
+    /* Replace with your image URL */
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
 }
 
-/* Responsive Layout */
-@media (min-width: 768px) {
-    .contact-page .top-section {
-        flex-direction: row;
-    }
+/* Overlay for Content */
+.contact-page .top-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff00;
+    /* Text color */
+    text-align: center;
 }
 
-/* Left Side (Contact Form) */
+.contact-page .top-overlay h1 {
+    font-size: 4vw;
+    /* Responsive font size */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.contact-page .top-overlay p {
+    font-size: 2vw;
+    /* Responsive font size */
+}
+
+/* Main Content Section */
+.contact-page .main-content {
+    display: flex;
+    flex-direction: row;
+    /* Default to row for desktop view */
+    width: 100%;
+    /* Full width */
+}
+
+/* Contact Section */
 .contact-page .contact-section {
     flex: 2;
+    /* Left section for contact */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 27px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .contact-page .contact-form-container {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0);
     padding: 20px;
     border-radius: 15px;
-    max-width: 500px;
-    width: 100%;
+    max-width: 400px;
+    width: 90%;
+    /* Responsive width */
     text-align: center;
     animation: fadeIn 1s forwards;
 }
 
 .contact-page .title {
-    font-size: 32px;
+    font-size: 1.5vw;
     margin-bottom: 15px;
-    color: #fefcfc;
+    color: #fbfafa;
+    /* Use a contrasting color */
 }
-
 .contact-page .intro {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 0.6vw;
 }
 
-.contact-page .home-contact-form {
-    background-color: rgba(255, 255, 255, 0.1);
-}
 
-.contact-page .home-contact-form input {
+
+
+/* Contact Container@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.contact-container.home-contact-form {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center align the content */
+    padding: 20px;
+    /* Padding around the container */
+    max-width: 600px;
+    /* Max width for larger screens */
+    margin: 0 auto;
+    /* Center the container on the page */
     width: 90%;
+
+    height: 65vh; /* Max height relative to viewport */
+    /* Use 90% width for small screens */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for depth */
+    border-radius: 15px;
+    /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.159);
+    /* Slightly transparent white */
+}
+
+/* Form Heading */
+.contact-container.home-contact-form h2 {
+    font-size: 1.1rem;
+    /* Adjust font size */
+    margin-bottom: 20px;
+    /* Spacing below the heading */
+    text-align: center;
+    /* Center the heading */
+}
+
+/* Contact Form */
+.contact-container.home-contact-form .contact-form {
+    width: 100%;
+    /* Full width for the form */
+}
+
+/* Contact Input Fields */
+.contact-container.home-contact-form .contact-form .contact-input {
+    width: 70%;
+    /* Full width for input fields */
     padding: 10px;
+    /* Padding inside the input fields */
+    margin: 3px 0;
+    /* Margin between inputs */
+    border: 1px solid #fff3f3;
+    /* Light border */
+    border-radius: 50px;
+    /* Rounded corners for inputs */
+    font-size: 0.5rem;
+    /* Font size for inputs */
+    background-color: #1ccec57b;
+}
+/* Change placeholder text color to white */
+.contact-container.home-contact-form .contact-form .contact-input::placeholder {
+    color: white;
+   
+}
+
+/* Textarea */
+.contact-container.home-contact-form .contact-form .contact-textarea {
+    width: 70%;
+    /* Full width for the textarea */
+    padding: 10px;
+    /* Padding inside the textarea */
     margin: 10px 0;
-    border: 1px solid #fffdfd8b;
-    border-radius: 20px;
-    background-color: rgba(12, 199, 241, 0.557);
-    color: #000;
+    /* Margin between textarea and inputs */
+   background-color: #f1f1f1;
+    border: 1px solid #a19e9e;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners for textarea */
+    font-size: 1rem;
+    /* Font size for textarea */
+}
+
+/* File Input */
+.contact-container.home-contact-form .contact-form input[type="file"] {
+    width: 60%;
+    /* Full width for the file input */
+    margin: 5px 0;
+    /* Margin between file input and other inputs */
+}
+
+/* Submit Button */
+.contact-container.home-contact-form .contact-form .contact-button {
+    width: 40%;
+    /* Full width for the button */
+    padding: 10px;
+    /* Padding inside the button */
+    background-color: #b80989;
+    box-shadow: #101010;
+    /* Button color */
+    color: #fbf8f8;
+    /* Text color */
+    border: none;
+    /* No border */
+    border-radius: 50PX;
+    /* Rounded corners for button */
+    font-size: 1rem;
+    /* Font size for button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
     transition: background-color 0.3s;
+    /* Smooth background color transition */
 }
 
-.contact-page .home-contact-form input:focus {
-    background-color: rgba(135, 206, 250, 0.5);
+/* Button Hover Effect */
+.contact-container.home-contact-form .contact-form .contact-button:hover {
+    background-color: #56c0b9;
+    /* Darker shade on hover */
 }
 
-/* Right Side (Partner Info) */
+
+
+
+/* Partner Info Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 .contact-page .partner-info-container {
     flex: 1;
+    /* Right section for partner info */
     display: flex;
-    max-width: 400px;
-    margin-left: 25%;
     flex-direction: column;
+    /* Stack elements vertically */
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: white;
+    /* Increased padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.756);
+    /* Slightly transparent white */
     border-radius: 15px;
     text-align: center;
-    position: relative;
-    animation: fadeIn 1s forwards;
+    max-width: 380px;
+    /* Set a max width for larger screens */
+    margin: 0 auto;
+    /* Center container */
+    width: 90%;
+    /* Allow full width on smaller screens */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Added shadow for depth */
+   
 }
 
-.contact-page .partner-info-container img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+/* Partner Info Styling */
+.contact-page .partner-info {
+    animation: fadeIn 1s forwards;
+    /* Fade-in animation */
+}
+
+/* Profile Picture Container */
+.contact-page .profile-picture {
+    position: relative;
+    width: 160px;
+    /* Size of the circle */
+    height: 160px;
+    left: 4.5%;
+    margin-bottom: 15px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensure image stays centered inside the circle */
+}
+
+/* Circle behind the profile picture */
+.contact-page .profile-bg {
+    position: absolute;
+    width: 100%;
+    /* Same size as the container */
+    height: 100%;
+    background: linear-gradient(45deg, #903778, #33faec);
     border-radius: 50%;
     z-index: 1;
+    /* Behind the image */
+}
+
+/* Image inside the circle */
+.contact-page .profile-picture img {
     position: relative;
-    margin-bottom: 20px;
+    width: 80%;
+    /* Adjust to control the size of the image inside the circle */
+    height: 80%;
+    object-fit: cover;
+    /* Ensure the image fits nicely */
+    border-radius: 50%;
+    /* Circular image */
+    z-index: 2;
+    /* Ensure the image stays on top */
 }
 
-.contact-page .partner-info-container::before {
-    content: '';
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 70%;
-    background: linear-gradient(to top, #5f0972, #4181d5, #2ae3ec);
-    z-index: 0;
-    top: 20px;
-}
-
+/* Partner Name */
 .contact-page .partner-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
+    font-size: 1vw;
+    /* Responsive font size */
+    margin: 5px 0;
+    /* Spacing */
+    color: #333;
+    /* Dark color for contrast */
 }
 
-.contact-page .partner-title,
-.contact-page .partner-location,
-.contact-page .partner-content,
-.contact-page .partner-description {
-    font-size: 15px;
-    color: black;
+/* Partner Title */
+.contact-page .partner-title {
+    font-size: 0.7vw;
+    /* Responsive font size */
+    margin: 3px 0;
+    /* Spacing */
+    color: #666;
+    /* Slightly lighter for differentiation */
 }
 
+/* Partner Location */
+.contact-page .partner-location {
+    font-size: 0.6vw;
+    /* Responsive font size */
+    margin: 3px 0;
+    /* Spacing */
+    color: #999;
+    /* Lighter color */
+}
+
+/* Partner Content */
 .contact-page .partner-heading {
-    font-size: 25px;
-    margin-bottom: 15px;
-    color: black;
+    font-size: 1.1vw;
+    /* Responsive font size */
+    margin: 20px 0;
+    /* Spacing */
+    color: #333;
+    /* Dark color for contrast */
 }
 
-/* Mobile Layout */
-@media (max-width: 768px) {
-    .contact-page .top-section {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        background-size: cover;
-        background-position: center;
-        height: auto;
-        overflow: hidden;
-    }
-
-    .contact-page .contact-section {
-        flex: 0 0 auto;
-        max-height: 40%;
-        width: 80%;
-        margin-bottom: 20px;
-        display: table;
-        justify-content: center;
-        align-items: center;
-        padding-left: 8%;
-    }
-
-    .contact-page .partner-info-container {
-        flex: 0 0 auto;
-        max-height: 40%;
-        width: 90%;
-        display: table;
-        justify-content: center;
-        align-items: center;
-        margin-left: 4%;
-    }
-
-    .contact-page .partner-info-container img {
-        height: 150px;
-        width: auto;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 20px;
-    }
-
-    .contact-page .partner-info-container::before {
-        content: '';
-        width: 160px;
-        height: 150px;
-        border-radius: 70%;
-        margin-left: -30%;
-    }
+.contact-page .partner-description {
+    font-size: 0.8vw;
+    /* Responsive font size */
+    line-height: 1.5;
+    /* Spacing between lines */
+    color: #444;
+    /* Darker color for readability */
+    padding: 0 15px;
+    /* Padding for mobile responsiveness */
 }
 
-/* Animations */
-.contact-page .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
-}
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* Office Section */
 .contact-page .offices-section {
     padding: 40px 20px;
     background-color: #f9f9f9;
     text-align: center;
+    max-width: 100%;
+    /* Ensure the section doesn't extend beyond this width */
+    margin: 0 auto;
+    /* Center the section in the viewport */
+    overflow: hidden;
+    /* Prevent overflow */
 }
 
+/* Office Section Heading */
 .contact-page .offices-heading {
     font-size: 36px;
     margin-bottom: 15px;
-    animation: fadeIn 1s forwards;
 }
 
-.contact-page .offices-description {
-    font-size: 16px;
-    margin-bottom: 30px;
-    color: #666;
-    animation: fadeIn 1s forwards;
-}
-
+/* Office Grid */
 .contact-page .offices-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-@media (min-width: 768px) {
-    .contact-page .offices-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.contact-page .office-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    animation: fadeIn 1s forwards;
-}
-
-.contact-page .office-card:hover {
-    transform: translateY(-10px);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 60px;
+    justify-content: center;
+    width: 800%;
+    /* Ensure grid is responsive within the section */
+    max-width: 80%;
+    /* Grid should not extend beyond the section */
+    margin: 0 auto;
 }
 
 .contact-page .office-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #39d9ea;
+    color: #33aaff;
+    /* Change this hex value to your desired color */
 }
 
-.contact-page .office-location,
-.contact-page .office-phone,
-.contact-page .office-email,
-.contact-page .office-address {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #333;
+/* Individual Office Card Styling */
+.contact-page .office-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Ensure vertical spacing and content does not overflow */
+.contact-page .contact-section,
+.contact-page .partner-info-container,
+.contact-page .offices-section {
+    margin: 20px 40px;
+    /* Add vertical spacing */
+}
+
+
+/* Mobile View Styles for @@@@@@@@@@@@@@@@@@@@@@@Below 690px */
+@media (max-width: 690px) {
+    .contact-page .top-section {
+        height: auto;
+        /* Adjust height to fit content */
+        padding: 20px;
+        /* Add padding for spacing */
+    }
+
+    .contact-page .contact-section {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items */
+    }
+
+    .contact-page .contact-form-container {
+        width: 90%;
+        /* Make both containers take 90% width */
+        max-width: none;
+        /* Remove max width restriction */
+        margin: 10px 0;
+        /* Add margin between containers */
+        margin-right: 8%;
+        
+    }
+  
+    .contact-page .partner-info-container {
+        width: 90%;
+        /* Make both containers take 90% width */
+        max-width: none;
+        /* Remove max width restriction */
+        margin: 10px 0;
+        /* Add margin between containers */
+        margin-right: 5%;
+    }
+
+    .contact-page .title {
+        font-size: 3.5vw;
+        /* Adjust title font size for mobile */
+    }
+
+    .contact-page .intro {
+        font-size: 2vw;
+        /* Adjust intro font size for mobile */
+    }
+
+    .contact-page .partner-name {
+        font-size: 4vw;
+        /* Adjust partner name font size for mobile */
+    }
+
+    .contact-page .partner-title,
+    .contact-page .partner-location {
+        font-size: 3vw;
+        /* Adjust partner title and location font size for mobile */
+    }
+
+    .contact-page .partner-heading {
+        font-size: 3.5vw;
+        /* Adjust partner heading font size for mobile */
+    }
+
+    .contact-page .partner-description {
+        font-size: 2.5vw;
+        /* Adjust partner description font size for mobile */
+    }
+        .contact-page .profile-picture {
+    
+            left: 27%;
+    
+            /* Ensure image stays centered inside the circle */
+        }
+}
+
+
+/*  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+@media (max-width: 500px) {
+    .contact-page .contact-form-container {
+        width: 95%;
+        /* Increase width to 95% */
+        /* Make both containers take 95% width */
+        max-width: none;
+        /* Remove max width restriction */
+        margin: 5px 0;
+        /* Add margin between containers */
+        margin-right: 10%;
+        /* Adjust right margin */
+    }
+
+    .contact-page .partner-info-container {
+        width: 95%;
+        /* Increase width to 95% */
+        /* Make both containers take 95% width */
+        max-width: none;
+        /* Remove max width restriction */
+        margin: 1px 0;
+        /* Add margin between containers */
+        margin-right: 8%;
+        /* Adjust right margin */
+    }
+    
+    /* Submit Button */
+     .contact-container.home-contact-form .contact-form .contact-button {
+            width: 40%;
+    
+            font-size: 0.5rem;
+            /* Font size for button */
+    
+        }
+
+         .contact-container.home-contact-form {
+       
+            height: 75vh;
+         
+        }
+
+        /* Profile Picture Container */
+.contact-page .profile-picture {
+  
+    left: 15%;
+   
+    /* Ensure image stays centered inside the circle */
+}
+
+ .contact-page .offices-grid {
+     width: 95%;
+     /* Set width to 95% on very small screens */
+     margin-left: 10%;
+     /* Center with a smaller margin */
+     margin-right: 2.5%;
+     /* Center with a smaller margin */
+     display: flex;
+     /* Use flexbox for responsiveness */
+     flex-wrap: wrap;
+     /* Allow wrapping of cards */
+     justify-content: center;
+     /* Center align cards */
+ }
+
+ /* Individual Office Card Styling */
+ .contact-page .office-card {
+     width: 90%;
+     /* Set width to 90% to allow some margin */
+     max-width: 300px;
+     /* Max width for office cards */
+     margin: 10px;
+     /* Margin around each card */
+     padding: 20px;
+     /* Padding inside the cards */
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     /* Optional: Add some shadow for visual appeal */
+     border-radius: 8px;
+     /* Optional: Rounded corners */
+     background-color: #fff;
+     /* Background color for cards */
+ }
+}
+
+/* Additional m@@@@@@@@@@@@@@@@@@@@@@@@@@@@ query for screens below a certain size, if necessary */
+@media (max-width: 360px) {
+
+    .contact-page .contact-form-container{
+        width: 150%;
+        margin-right: 25%;
+            /* Adjust right margin */
+       
+    }
+   
+    .contact-container.home-contact-form {
+       
+            height: 85vh;
+         
+        }
+    
+        .contact-page .partner-info-container {
+        width: 150%;
+        margin-right: 23%;
+            /* Adjust right margin */
+       
+    }
+        /* Submit Button */
+        .contact-container.home-contact-form .contact-form .contact-button {
+            width: 40%;
+          
+            font-size: 0.5rem;
+            /* Font size for button */
+       
+        }
+
+                /* Profile Picture Container */
+        .contact-page .profile-picture {
+  
+           left: 0%;
+   
+           /* Ensure image stays centered inside the circle */
+}
 }

@@ -1,3 +1,4 @@
+
 /* General Styling */
 .home-page {
     font-family: Arial, sans-serif;
@@ -6,7 +7,20 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    overflow-y: hidden;
     animation: fadeInBody 1s ease-out;
+}
+
+[data-aos] {
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.5s ease-out;
+    /* Smooth transition */
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    /* Fully visible when animated */
 }
 
 /* Animation for the whole body */
@@ -198,6 +212,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
     padding: 20px;
+    overflow: hidden;
 }
 
 .image-wrapper {
@@ -276,13 +291,106 @@
     }
 }
 
+
+
+/* src/styles/HomePage.css */
+.contact-container {
+    background-color: #faf7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-input,
+.contact-textarea {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #b5b3b3;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    width: 80%;
+    max-width: 500px;
+}
+
+.contact-button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-button:hover {
+    background-color: #218838;
+}
+
+.success-message {
+    color: green;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: rgb(13, 145, 52);
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
+
+/* Mobile View */
+@media (max-width: 520px) {
+
+    /* Top Section */
+        .top-section {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+    
+        .top-image {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+
+ 
+
+   /* Semi-Circles and GIF Container */
+   .semi-circle-container {
+       position: absolute;
+       bottom: 45%;
+       left: 50%;
+       transform: translateX(-50%);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       height: auto;
+       z-index: 1;
+   }
+
+}
 /* Mobile View */
 @media (max-width: 767px) {
+
+  
+
     .header-text h1 {
         font-size: 4.5vw;
         padding: 0 15px;
+        margin-top: 20%;
     }
 
     .header-text p {
@@ -290,7 +398,19 @@
         padding: 0 15px;
     }
 
-   
+   /* Semi-Circles and GIF Container */
+   .semi-circle-container {
+       position: absolute;
+       bottom: 50%;
+       left: 50%;
+       transform: translateX(-50%);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       height: auto;
+       z-index: 1;
+   }
 
 
 
@@ -299,20 +419,71 @@
         gap: 10px;
     }
 
-    .image-wrapper {
-        margin-bottom: 10px;
-        height: 200px;
-    }
+        /* Image Wrapper */
+        .image-wrapper {
+            position: relative;
+            height: 200px;
+            /* Adjust the height as needed */
+            overflow: hidden;
+            top: -10%;
+        }
+    
+          /* Buttons container centered in the image */
+          .image-buttons {
+              position: absolute;
+              top: 50%;
+              /* Center vertically */
+              left: 50%;
+              /* Center horizontally */
+              transform: translate(-50%, -50%);
+              /* Center the container */
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              opacity: 0;
+              /* Initially hidden */
+              visibility: visible;
+              /* Make buttons visible */
+              animation: fadeUp 1s ease-in-out forwards;
+              /* Apply fade-up animation once */
+          }
+    
+                /* Fade-up keyframe animation */
+                @keyframes fadeUp {
+                    0% {
+                        opacity: 0;
+                        transform: translate(-50%, calc(-50% + 20px));
+                        /* Start slightly below */
+                    }
+        
+                    100% {
+                        opacity: 1;
+                        transform: translate(-50%, -50%);
+                        /* End in the center */
+                    }
+                }
+    
+                /* Button Styling */
+                .button {
+                    background: linear-gradient(135deg, #03b9a6, #480e7b);
+                    color: rgb(255, 255, 255);
+                    padding: 5px 8px;
+                    /* Reduced button padding */
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 0.7em;
+                    /* Reduced button text size */
+                }
+    
+        /* Smooth scrolling behavior for the page */
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
 
-    .image-buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
 
-    .button {
-        font-size: 0.8em;
-        padding: 6px 10px;
-    }
+
 }
 
 
@@ -333,20 +504,71 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .image-wrapper {
-        height: 300px;
-    }
+  /* Image Wrapper */
+  .image-wrapper {
+      position: relative;
+      height: 200px;
+      /* Adjust the height as needed for mobile */
+      overflow: hidden;
+  }
 
-    .image-buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
+  /* Buttons container centered in the image */
+  .image-buttons {
+      position: absolute;
+      top: 50%;
+      /* Center vertically */
+      left: 50%;
+      /* Center horizontally */
+      transform: translate(-50%, -50%);
+      /* Center the container */
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      opacity: 0;
+      /* Initially hidden */
+      visibility: visible;
+      /* Make buttons visible */
+      animation: fadeUp 1s ease-in-out forwards;
+      /* Apply fade-up animation once */
+  }
 
-    .button {
-        font-size: 0.9em;
-        padding: 8px 15px;
-    }
-}
+  /* Fade-up keyframe animation */
+  @keyframes fadeUp {
+      0% {
+          opacity: 0;
+          transform: translate(-50%, calc(-50% + 20px));
+          /* Start slightly below */
+      }
+
+      100% {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+          /* End in the center */
+      }
+  }
+
+  /* Button Styling with Linear Gradient */
+  .button {
+      background: linear-gradient(135deg, #2fffea, #007bff);
+      /* Gradient from teal to blue */
+      color: white;
+      padding: 5px 8px;
+      /* Reduced button padding */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.7em;
+      /* Reduced button text size */
+  }
+
+  /* Smooth scrolling behavior for the page */
+  html,
+  body {
+      scroll-behavior: smooth;
+  }
+  }
+
+
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 /* Web View */
@@ -380,132 +602,7 @@
     }
 }
 
-/* src/styles/HomePage.css */
-.contact-container {
-    background-color: #faf7f7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-input,
-.contact-textarea {
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #b5b3b3;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 500px;
-}
-
-.contact-button {
-    padding: 12px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-button:hover {
-    background-color: #218838;
-}
-
-.success-message {
-    color: green;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-.error-message {
-    color: rgb(13, 145, 52);
-    font-size: 1.2em;
-    margin-top: 10px;
-}
 
 
-/* Adjust Semi-Circle for small screens */
-@media (min-width: 250px) and (max-width: 699px) {
-   
 
-
-    /* Semi-Circles and GIF Container */
-        .semi-circle-container {
-            position: absolute;
-            bottom: 45%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: auto;
-            z-index: 1;
-        }
-    /* Responsive Semi-Circle-1 */
-        .semi-circle-1 {
-           
-            width: 36vw;
-            /* Adjust size as needed */
-            height: 29vw;
-            /* Adjust size as needed */
-            z-index: -3;
-            top: -12%;
-            right: 40%;
-            animation: unfold 3s ease-out forwards;
-        }
-    
-        /* Responsive Semi-Circle-2 */
-        .semi-circle-2 {
-            
-            z-index: -2;
-            width: 36vw;
-            /* Adjust size as needed */
-            height: 29vw;
-            /* Adjust size as needed */
-            top: -15%;
-            right: 20%;
-            transform: translateX(10%);
-            animation: unfold 3s ease-out forwards;
-        }
-    
-        /* GIF Styling */
-        .centered-gif {
-            position: absolute;
-            /* Changed to absolute to better control positioning */
-            z-index: 3;
-            width: 45vw;
-            /* Adjust size as needed */
-            height: auto;
-            /* Maintains aspect ratio */
-            bottom: calc(50% - 12.5vw);
-            /* Centers the GIF vertically based on its size */
-            animation: openCenterGIF 2.5s ease-out forwards;
-            transform: translateX(-50%);
-            /* Centers horizontally */
-            left: 28%;
-            /* Aligns the GIF to the center */
-            margin-bottom: -15.5%;
-        }
-
-
-    .contact-container {
-        padding: 15px;
-    }
-
-    .contact-input, .contact-textarea, .contact-button {
-        font-size: 14px;
-    }
-}
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 

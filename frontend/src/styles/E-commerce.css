@@ -1,0 +1,416 @@
+/* General Page Styles */
+.ecommerce-page {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        padding: 0;
+        /* Removed unnecessary padding */
+        margin: 0;
+        /* Removed unnecessary margin */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+        width: 100%;
+        /* Ensure full width */
+    }
+
+
+
+    body {
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+        width: 100%;
+        /* Ensure body is 100% of viewport width */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+    }
+
+
+
+.ecommerce-hero-content h1 {
+    font-size: 3.7vw;
+    /* Default size for larger screens */
+    color: #7d4915;
+    margin-top: -1%;
+    animation: unfold 1s ease-out forwards;
+}
+
+.ecommerce-hero-content p {
+    font-size: 0.9rem;
+    /* Default size for larger screens */
+    color: #333;
+    margin-bottom: 3%;
+}
+
+
+
+/* Circle Container */
+.ecommerce-circle-container {
+    width: 80vw;
+    height: 35vw;
+    max-width: 500px;
+    max-height: 250px;
+    position: relative;
+    margin: 0 auto;
+    /* Centering */
+}
+
+/* Wing Circles */
+.ecommerce-wing-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Left Circle */
+.ecommerce-left-circle {
+    background: linear-gradient(45deg, #8b340f, #e76215);
+    /* Example gradient */
+    left: 20%;
+    /* Align to left */
+    animation: unfold 1s ease-out forwards;
+}
+
+/* Right Circle */
+.ecommerce-right-circle {
+    background: linear-gradient(45deg, #e94715, #882916);
+    /* Different gradient */
+    right: 20%;
+    /* Align to right */
+    animation: unfold 1s ease-out forwards;
+}
+
+/* Center Image Circle */
+.ecommerce-center-image-circle {
+    height: 35vw;
+    width: 65vw;
+    max-width: 600px;
+    max-height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5% solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+
+
+}
+
+/* Center Image */
+.ecommerce-center-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Small Circle Wrapper */
+.ecommerce-small-circle-wrapper {
+    margin-top: 2%;
+    text-align: center;
+}
+
+
+/* Small Circle */
+.ecommerce-small-circle {
+    width: 5vw;
+    height: 5vw;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #8b340f, #e76215);
+    margin: 3% auto;
+        /* Center the small circle */
+    /* Center the small circle */
+}
+
+/* Small Circle Text */
+.ecommerce-small-circle-text {
+    font-size: 2.0vw;
+    /* Approximately 1rem based on a viewport width of 800px */
+    font-weight: bold;
+    color: #6011e9;
+    margin: 3% auto;
+            /* Center the small circle */
+}
+
+
+
+/* Adjusting for small circle hover effect */
+.ecommerce-small-circle-wrapper:hover .ecommerce-small-circle {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    /* On hover */
+    transition: 0.3s ease;
+}
+
+.ecommerce-arrow {
+    font-weight: bold;
+    font-size: 3vw;
+    color: #f6f3f4;
+
+}
+
+.ecommerce-small-circle-wrapper:hover .ecommerce-arrow {
+    color: #fff;
+}
+
+
+
+/* Services Section */
+.ecommerce-section {
+    background-image: url('../assets/images/INDUSTRY/E-commerce/image2.jpg'), linear-gradient(to right, #8b340f, #e76215);
+    background-size: 50% auto, 60% auto;
+    /* Make background-size responsive */
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 5vw 3vw;
+    /* Use responsive padding */
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+
+.ecommerce-section {
+    font-size: 3.5vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(50, 52, 54, 0.916);
+}
+
+.ecommerce-section p {
+    font-size: 1.8vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Responsive width */
+}
+
+
+.ecommerce-service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+.ecommerce-service-tags span {
+    background-color: #e27438;
+    color: rgb(246, 245, 245);
+    padding: 0.5vw 1.2vw;
+    /* Responsive padding */
+    border-radius: 6px;
+    font-size: 1.2vw;
+    /* Responsive font size */
+    margin-top: 1vw;
+    /* Responsive margin */
+}
+
+
+
+.ecommerce-tool-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #69250b;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease;
+    padding: 1vw;
+}
+
+.ecommerce-tool-icon:hover {
+    transform: scale(1.1);
+    /* Hover effect */
+}
+
+.ecommerce-tool-icon p {
+    margin-top: 1vw;
+    /* Responsive margin */
+    font-size: 1.4vw;
+    /* Responsive font size */
+    font-weight: bold;
+    color: #0e0f0f;
+}
+
+.ecommerce-industry-section {
+    background-image: linear-gradient(to right, #8b340f, #e76215), url('../assets/images/INDUSTRY/E-commerce/image3.webp');
+    background-size: 50% 50%, 50% 50%;
+    /* Responsive background size */
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 5vw 3vw;
+    /* Responsive padding */
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+
+.ecommerce-industry-section h2 {
+    font-size: 3vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(93, 96, 99, 0.916);
+}
+
+.ecommerce-industry-section p {
+    font-size: 1.5vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Set max-width relative to the viewport */
+}
+
+.ecommerce-circle-button {
+    display: flex;
+    /* Flexbox to center the arrow */
+    justify-content: center;
+    /* Center the arrow */
+    align-items: center;
+    /* Center the arrow */
+    background: linear-gradient(135deg, #8b340f, #e76215);
+    /* Gradient color */
+    color: white;
+    width: 10vw;
+    /* Responsive width */
+    height: 10vw;
+    /* Responsive height */
+    max-width: 40px;
+    /* Max width to limit the circle size */
+    max-height: 40px;
+    /* Max height to limit the circle size */
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.ecommerce-circle-button:hover {
+    transform: scale(1.1);
+    /* Scale effect on hover */
+}
+
+
+
+/* Services Section */
+.ecommerce-mad-services-section {
+    background-image: url('../assets/images/INDUSTRY/E-commerce/image4.webp'), linear-gradient(to right, #8b340f, #e76215);
+    background-size: 50% 40%, 60% 40%;
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    color: #f6f9fb;
+    text-align: center;
+    margin-left: 3%;
+}
+.ecommerce-mad-services-section h2 {
+    font-size: 4vw;
+    /* Responsive font size */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2vw;
+    /* Responsive margin */
+    text-shadow: 2px 2px 4px rgba(50, 52, 54, 0.916);
+}
+
+.ecommerce-mad-services-section p {
+    font-size: 1.5vw;
+    /* Responsive font size */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 80vw;
+    /* Responsive max width */
+}
+
+
+@media (max-width: 768px) {
+    .ecommerce-hero-content h1 {
+        font-size: 5vw;
+    }
+
+    .ecommerce-hero-content p {
+        font-size: 0.5rem;
+    }
+
+    .ecommerce-circle-container {
+        width: 70vw;
+        height: 35vw;
+    }
+
+    .ecommerce-center-image-circle {
+        height: 30vw;
+        width: 60vw;
+    }
+
+    .ecommerce-tool-icon p {
+        font-size: 2.5vw;
+        /* Adjust font size inside tool icons for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .ecommerce-hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .ecommerce-hero-content p {
+        font-size: 1.5dvh;
+        /* Set a small font size *
+        line-height: 1;
+        /* Reduce line height minimize space */
+        margin: 0;
+        /* Remove any default margins */
+        padding: 0;
+        /* Remove any default padding */
+        overflow: hidden;
+        /* Prevent overflow */
+        display: block;
+        /* Ensures it behaves like a block element */
+    }
+
+
+    .ecommerce-circle-container {
+        width: 50vw;
+        height: 25vw;
+    }
+
+    .ecommerce-center-image-circle {
+        height: 25vw;
+        width: 50vw;
+    }
+
+    .ecommerce-small-circle {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .ecommerce-arrow {
+        font-size: 5vw;
+    }
+
+
+
+    .ecommerce-tool-icon {
+        padding: 2vw;
+        /* Adjust padding for mobile */
+    }
+
+    .ecommerce-tool-icon p {
+        font-size: 3vw;
+        /* Adjust font size inside tool icons for mobile */
+    }
+
+}

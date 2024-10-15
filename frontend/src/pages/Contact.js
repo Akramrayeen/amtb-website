@@ -1,33 +1,39 @@
-import React from 'react';
-import Header from '../components/Navbar'; // Import the Header component
+import React, { useEffect } from 'react';
+
 import Footer from '../components/Footer'; // Import Footer component
 import ContactForm from '../components/ContactForm';
 import '../styles/Contact.css'; // Import CSS for this specific page
+import AOS from 'aos'; // Import AOS
+import 'aos/dist/aos.css'; // Import AOS styles
 
 import contact from '../assets/images/ABOUT/contact.jpg'; // Background image
 import akram from '../assets/images/ABOUT/akram.png'; // Profile image
 
 const Contact = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of animations
+    });
+  }, []);
+
   return (
     <div className="contact-page">
-      <Header />
+      
       <div className="top-section" style={{ backgroundImage: `url(${contact})` }}>
         <div className="contact-section">
           {/* Left Half: Contact Form */}
-          <div className="contact-form-container">
+          <div className="contact-form-container" data-aos="fade-up">
             <h1 className="title">GET IN TOUCH</h1>
             <p className="intro">
-              We'd love to hear about your project and the challenges you're facing. Our team is
-              here to assist you and will get back to you within 24 hours to arrange a free consultation.
-              If needed, we can provide a Non-Disclosure Agreement (NDA) to ensure your information remains
-              confidential.
+              Tell us about your project and challenges. We'll respond within 24 hours to arrange a free consultation, and an NDA is available if needed.
             </p>
             <ContactForm className="home-contact-form" />
           </div>
 
           {/* Right Half: Partner Info */}
           <div className="partner-info-container">
-            <div className="partner-info fade-in">
+            <div className="partner-info fade-in" data-aos="fade-left">
               <div className="profile-picture">
                 <div className="profile-bg"></div>
                 <img src={akram} alt="Profile Picture" />
@@ -36,7 +42,7 @@ const Contact = () => {
               <p className="partner-title">Founder, AMTB Solutions</p>
               <p className="partner-location">India</p>
             </div>
-            <div className="partner-content fade-in">
+            <div className="partner-content fade-in" data-aos="fade-right">
               <h2 className="partner-heading">YOUR PARTNER IN TECH EXCELLENCE</h2>
               <p className="partner-description">
                 Partner with AMTB Solution and experience a new level of tech development. Our team's passion
@@ -49,29 +55,36 @@ const Contact = () => {
       </div>
 
       {/* Offices Section */}
-      <div className="offices-section">
+      <div className="offices-section" data-aos="fade-up">
         <h2 className="offices-heading">OFFICES</h2>
         <p className="offices-description">
           AMTB Solution operates with a global outlook while maintaining a strong local presence. Our team spans
           various regions to provide you with exceptional service wherever you are.
         </p>
         <div className="offices-grid">
-          <div className="office-card">
+          <section className="office-card">
             <h3 className="office-title">INDIA</h3>
             <p className="office-location">Bangalore</p>
             <p className="office-phone">+918431960546</p>
             <p className="office-email">support@amtbsolution.com</p>
             <p className="office-address">
-              Unit #1, Oxford Tower, 108 HAL Old Airport Road, HAL 1 Stage, Bangalore 560008, Karnataka
+              Unit 101, Oxford Tower, 108 HAL Old Airport Road, HAL 1 Stage, Bangalore 560008, Karnataka
             </p>
-          </div>
-          <div className="office-card">
+          </section>
+          <section className="office-card">
             <h3 className="office-title">NEPAL</h3>
             <p className="office-location">Dhanusha</p>
             <p className="office-phone">+9779800825100</p>
             <p className="office-email">info@amtbsolution.com</p>
             <p className="office-address">Thaila-4, Charusha, lasakpur, Nepal</p>
-          </div>
+          </section>
+          <section className="office-card">
+            <h3 className="office-title">QATAR</h3>
+            <p className="office-location">Doha</p>
+            <p className="office-phone">+97474463625</p>
+            <p className="office-email">info@amtbsolution.com</p>
+            <p className="office-address">Indistrial Area,Doha Qatar</p>
+          </section>
         </div>
       </div>
 

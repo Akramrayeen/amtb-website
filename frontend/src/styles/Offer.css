@@ -1,0 +1,210 @@
+.website-package-section {
+    position: relative;
+    padding: 60px;
+}
+
+/* Styling for the heading */
+.web-package .website-package-heading,
+.mobile-package .package-heading,
+.whatsapp-automation-package .package-heading
+ {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+   text-align: center;
+}
+
+/* Styling for the description */
+.mobile-package .package-description,
+.web-package .website-package-description,
+.whatsapp-automation-package .package-description {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* Hide scroll buttons by default */
+.scroll-button {
+    display: none;
+}
+
+.pricing-table {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+
+
+.pricing-table {
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+    white-space: normal;
+    margin-left: 7%;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    margin-top: 5%;
+    flex-shrink: 0;
+}
+
+.card-header {
+    position: relative;
+    height: 300px;
+    width: 124%;
+    max-width: 520px;
+    overflow: hidden;
+    left: -11%;
+    top: -4%;
+}
+
+.card-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4a90e2, #2196f3);
+    clip-path: polygon(0 100%, 100% 100%, 100% 60%, 50% 85%, 0 60%);
+    z-index: -1;
+}
+
+.wavy-background {
+    width: 200%;
+    height: 280px;
+    position: absolute;
+    bottom: 0;
+    left: -60%;
+    top: -50px;
+}
+
+.card-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+}
+
+.pricing-circle {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    background: linear-gradient(135deg, #2d0125, #00f5e9);
+    border-radius: 50%;
+    color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 5px solid white;
+}
+
+.features-section {
+    background-color: rgba(35, 17, 235, 0);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: -150px;
+}
+
+.feature-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.feature-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.status-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.tick {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+}
+
+.cross {
+    background: linear-gradient(135deg, #f44336, #e57373);
+}
+
+.card-button {
+    background-color: #92105e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.card-button:hover {
+    background-color: #2196f3;
+}
+
+
+
+/* Enable scrolling for mobile and tablet */
+@media (max-width: 768px) {
+    .scrollable-container {
+        overflow: auto;
+    }
+        .scrollable-container {
+            display: flex;
+            align-items: center;
+            /* Default: no scrolling */
+        }
+
+                .scroll-button {
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px;
+                    cursor: pointer;
+                    position: absolute;
+                    z-index: 1;
+                }
+                                .scroll-button.left {
+                                    left: 10px;
+                                }
+                
+                                .scroll-button.right {
+                                    right: 10px;
+                                }
+                
+                                .scroll-button:hover {
+                                    background-color: #0056b3;
+                                }
+}
+
