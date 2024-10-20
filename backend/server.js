@@ -1,6 +1,5 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -10,25 +9,6 @@ require('dotenv').config(); // For environment variables
 // Express setup
 const app = express();
 app.use(bodyParser.json());
-
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-
-// Mongoose Schema for contact form submissions
-const contactSchema = new mongoose.Schema({
-  name: String,
-  companyName: String,
-  email: String,
-  phoneNumber: String,
-  projectDetails: String,
-  fileUrl: String,
-  date: { type: Date, default: Date.now },
-});
-
-const Contact = mongoose.model('Contact', contactSchema);
 
 // Multer storage and file handling for file uploads
 const storage = multer.diskStorage({
@@ -57,18 +37,7 @@ app.post('/api/contact', upload.single('file'), async (req, res) => {
   const { name, companyName, email, phoneNumber, projectDetails } = req.body;
   const file = req.file ? req.file.filename : null;
 
-  const newContact = new Contact({
-    name,
-    companyName,
-    email,
-    phoneNumber,
-    projectDetails,
-    fileUrl: file ? `/uploads/${file}` : null,
-  });
-
   try {
-    await newContact.save();
-
     // Send email notification
     const mailOptions = {
       from: email,
@@ -93,7 +62,7 @@ app.post('/api/contact', upload.single('file'), async (req, res) => {
 
     await transporter.sendMail(mailOptions);
 
-    console.log('Form saved and email sent');
+    console.log('Email sent successfully');
     res.status(200).json({ message: 'Form submitted successfully!' });
   } catch (error) {
     console.error('Error:', error);
